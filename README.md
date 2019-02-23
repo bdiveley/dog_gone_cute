@@ -73,3 +73,34 @@ I want to use api so I can get to get pictures dynamically in case they add or c
   ]
 }
 ```
+
+**GET /api/v1/dogs/search?breed=chow&order=desc**
+
+**Response (Success)**
+```shell
+{:data=>
+  [{:id=>"1080",
+    :type=>"dog",
+    :attributes=>{:id=>1080, :breed_id=>1081, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>4.46666666666667}},
+   {:id=>"1079",
+    :type=>"dog",
+    :attributes=>{:id=>1079, :breed_id=>1081, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>1.0}}
+  ]
+}
+```
+
+**GET /api/v1/dogs/search?breed=chow&order=asc**
+
+**Response (Success)**
+```shell
+{:data=>
+  [{:id=>"1085",
+    :type=>"dog",
+    :attributes=>{:id=>1085, :breed_id=>1085, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>3.5}},
+   {:id=>"1084",
+    :type=>"dog",
+    :attributes=>
+     {:id=>1084, :breed_id=>1085, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>4.677}}
+  ]
+}
+```
