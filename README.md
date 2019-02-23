@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Anyone who goes to the site sees the same thing.
+2. Visitors can rate dog photos by cuteness (You may choose the scale)
+3. They can then filter dog photos by cuteness level.
+4. Dogs can also be filtered by dog breed
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://dog.ceo/api/breed/:breed/images/random (by breed)
+https://dog.ceo/api/breeds/image/random (all breeds)
