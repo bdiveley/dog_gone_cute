@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :breed do
-    name { Faker::Dog.breed }
+    name { Faker::Creature::Dog.breed }
   end
-end 
+end
