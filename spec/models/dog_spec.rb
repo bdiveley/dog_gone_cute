@@ -11,10 +11,10 @@ RSpec.describe Dog, type: :model do
   end
   describe "Class Methods" do
     it "dogs ordered by cutest average rating" do
-      dog_1 = create(:dog, votes: 15, total_score: 39) #2.6
-      dog_2 = create(:dog, votes: 10, total_score: 10) #1
-      dog_3 = create(:dog, votes: 20, total_score: 35) #1.75
-      dog_4 = create(:dog, votes: 35, total_score: 75) #2.14
+      dog_1 = create(:dog, votes: 15, total_score: 39)
+      dog_2 = create(:dog, votes: 10, total_score: 10)
+      dog_3 = create(:dog, votes: 20, total_score: 35)
+      dog_4 = create(:dog, votes: 35, total_score: 75)
 
       dogs = Dog.find_dogs("desc")
 

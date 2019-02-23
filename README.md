@@ -26,27 +26,50 @@ I want to use api so I can get to get pictures dynamically in case they add or c
 *No Dog starts in the database.
 *When a user clicks on any picture and then rates the picture, a Create method is called to add that photo do the database (find_or_create).  **POST /api/v1/dogs**
 
-**GET /api/v1/dogs**
+**GET /api/v1/dogs?order=desc**
 
 **Response (Success)**
 ```shell
 {:data=>
-  [
-  {:id=>"300",
+  [{:id=>"603",
     :type=>"dog",
-    :attributes=>{:id=>300, :breed_id=>338, :photo=>"https://images.dog.ceo/breeds/chow/n02092002_14567.jpg", :ave_score=>16}},
-   {:id=>"298",
+    :attributes=>{:id=>603, :breed_id=>641, :photo=>"https://images.dog.ceo/breeds/beagle/n02092002_14567.jpg", :ave_score=>87.0}},
+   {:id=>"601",
     :type=>"dog",
-    :attributes=>{:id=>298, :breed_id=>336, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>7}},
-   {:id=>"297",
+    :attributes=>{:id=>601, :breed_id=>639, :photo=>"https://images.dog.ceo/breeds/chow/n02092002_14567.jpg", :ave_score=>30.0}},
+   {:id=>"600",
     :type=>"dog",
-    :attributes=>{:id=>297, :breed_id=>335, :photo=>"https://images.dog.ceo/breeds/bouvier/n02092002_14567.jpg", :ave_score=>6}},
-   {:id=>"299",
+    :attributes=>{:id=>600, :breed_id=>638, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>9.11111111111111}},
+   {:id=>"599",
     :type=>"dog",
-    :attributes=>{:id=>299, :breed_id=>337, :photo=>"https://images.dog.ceo/breeds/affenpinscher/n02092002_14567.jpg", :ave_score=>5}},
-   {:id=>"293",
+    :attributes=>{:id=>599, :breed_id=>637, :photo=>"https://images.dog.ceo/breeds/bouvier/n02092002_14567.jpg", :ave_score=>6.58333333333333}},
+   {:id=>"602",
     :type=>"dog",
-    :attributes=>{:id=>293, :breed_id=>331, :photo=>"https://images.dog.ceo/breeds/beagle/n02092002_14567.jpg", :ave_score=>2}}
+    :attributes=>{:id=>602, :breed_id=>640, :photo=>"https://images.dog.ceo/breeds/affenpinscher/n02092002_14567.jpg", :ave_score=>2.1875}}
+  ]
+}
+```
+
+**GET /api/v1/dogs?order=asc**
+
+**Response (Success)**
+```shell
+{:data=>
+  [{:id=>"588",
+    :type=>"dog",
+    :attributes=>{:id=>588, :breed_id=>626, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>0.611111111111111}},
+   {:id=>"587",
+    :type=>"dog",
+    :attributes=>{:id=>587, :breed_id=>625, :photo=>"https://images.dog.ceo/breeds/chow/n02092002_14567.jpg", :ave_score=>0.642857142857143}},
+   {:id=>"590",
+    :type=>"dog",
+    :attributes=>{:id=>590, :breed_id=>628, :photo=>"https://images.dog.ceo/breeds/beagle/n02092002_14567.jpg", :ave_score=>2.54545454545455}},
+   {:id=>"586",
+    :type=>"dog",
+    :attributes=>{:id=>586, :breed_id=>624, :photo=>"https://images.dog.ceo/breeds/bouvier/n02092002_14567.jpg", :ave_score=>3.06666666666667}},
+   {:id=>"589",
+    :type=>"dog",
+    :attributes=>{:id=>589, :breed_id=>627, :photo=>"https://images.dog.ceo/breeds/affenpinscher/n02092002_14567.jpg", :ave_score=>5.57142857142857}}
   ]
 }
 ```
