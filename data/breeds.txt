@@ -1,0 +1,132 @@
+Affenpinscher
+African
+Airedale
+Akita
+Appenzeller
+Basenji
+Beagle
+Bluetick
+Borzoi
+Bouvier
+Boxer
+Brabancon
+Briard
+Boston Bulldog
+French Bulldog
+Staffordshire Bullterrier
+Cairn
+Australian Cattledog
+Chihuahua
+Chow
+Clumber
+Cockapoo
+Border Collie
+Coonhound
+Cardigan Corgi
+Cotondetulear
+Dachshund
+Dalmatian
+Great Dane
+Scottish Deerhound
+Dhole
+Dingo
+Doberman
+Norwegian Elkhound
+Entlebucher
+Eskimo
+Bichon Frise
+Germanshepherd
+Italian Greyhound
+Groenendael
+Afghan Hound
+Basset Hound
+Blood Hound
+English Hound
+Ibizan Hound
+Walker Hound
+Husky
+Keeshond
+Kelpie
+Komondor
+Kuvasz
+Labrador
+Leonberg
+Lhasa
+Malamute
+Malinois
+Maltese
+Bull Mastiff
+English Mastiff
+Tibetan Mastiff
+Mexicanhairless
+Mix
+Bernese Mountain
+Swiss Mountain
+Newfoundland
+Otterhound
+Papillon
+Pekinese
+Pembroke
+Miniature Pinscher
+German Pointer
+Germanlonghair Pointer
+Pomeranian
+Miniature Poodle
+Standard Poodle
+Toy Poodle
+Pug
+Puggle
+Pyrenees
+Redbone
+Chesapeake Retriever
+Curly Retriever
+Flatcoated Retriever
+Golden Retriever
+Rhodesian Ridgeback
+Rottweiler
+Saluki
+Samoyed
+Schipperke
+Giant Schnauzer
+Miniature Schnauzer
+English Setter
+Gordon Setter
+Irish Setter
+English Sheepdog
+Shetland Sheepdog
+Shiba
+Shihtzu
+Blenheim Spaniel
+Brittany Spaniel
+Cocker Spaniel
+Irish Spaniel
+Japanese Spaniel
+Sussex Spaniel
+Welsh Spaniel
+English Springer
+Stbernard
+American Terrier
+Australian Terrier
+Bedlington Terrier
+Border Terrier
+Dandie Terrier
+Fox Terrier
+Irish Terrier
+Kerryblue Terrier
+Lakeland Terrier
+Norfolk Terrier
+Norwich Terrier
+Patterdale Terrier
+Russell Terrier
+Scottish Terrier
+Sealyham Terrier
+Silky Terrier
+Tibetan Terrier
+Toy Terrier
+Westhighland Terrier
+Wheaten Terrier
+Yorkshire Terrier
+Vizsla
+Weimaraner
+Whippet
+Irish Wolfhound
