@@ -4,7 +4,7 @@ class Dog < ApplicationRecord
   validates_presence_of :votes
   validates_presence_of :total_score
 
-  def self.cutest_dogs
-    Dog.select("dogs.*, total_score/votes AS ave_score").order("total_score/votes desc")
+  def self.find_dogs(order)
+    Dog.select("dogs.*, total_score / CAST (votes AS FLOAT) AS ave_score").order("ave_score #{order}")
   end
 end

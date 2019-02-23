@@ -9,4 +9,34 @@ RSpec.describe Dog, type: :model do
   describe "Relationships" do
     it { is_expected.to belong_to(:breed) }
   end
+  describe "Class Methods" do
+    it "dogs ordered by cutest average rating" do
+      dog_1 = create(:dog, votes: 15, total_score: 39) #2.6
+      dog_2 = create(:dog, votes: 10, total_score: 10) #1
+      dog_3 = create(:dog, votes: 20, total_score: 35) #1.75
+      dog_4 = create(:dog, votes: 35, total_score: 75) #2.14
+
+      dogs = Dog.find_dogs("desc")
+
+      expect(dogs.length).to eq(4)
+      expect(dogs[0]).to eq(dog_1)
+      expect(dogs[1]).to eq(dog_4)
+      expect(dogs[2]).to eq(dog_3)
+      expect(dogs[3]).to eq(dog_2)
+    end
+    it "dogs ordered by worst average rating" do
+      dog_1 = create(:dog, votes: 15, total_score: 39) #2.6
+      dog_2 = create(:dog, votes: 10, total_score: 10) #1
+      dog_3 = create(:dog, votes: 20, total_score: 35) #1.75
+      dog_4 = create(:dog, votes: 35, total_score: 75) #2.14
+
+      dogs = Dog.find_dogs("asc")
+
+      expect(dogs.length).to eq(4)
+      expect(dogs[0]).to eq(dog_2)
+      expect(dogs[1]).to eq(dog_3)
+      expect(dogs[2]).to eq(dog_4)
+      expect(dogs[3]).to eq(dog_1)
+    end
+  end
 end
