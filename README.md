@@ -104,3 +104,20 @@ I want to use api so I can get to get pictures dynamically in case they add or c
   ]
 }
 ```
+
+**POST /api/v1/dogs**
+```shell
+Body: { photo: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg",
+  score: 3
+}
+```
+
+**Response (Success)**
+```shell
+{:data=>
+  {:id=>"1573",
+   :type=>"dog",
+   :attributes=>{:id=>1573, :breed_id=>1525, :photo=>"https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg", :ave_score=>3.0}
+ }
+}
+```
