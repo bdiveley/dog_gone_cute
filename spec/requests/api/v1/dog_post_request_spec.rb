@@ -32,7 +32,6 @@ describe "POST requests for Dogs" do
     post "/api/v1/dogs", params: params
 
     parsed = JSON.parse(response.body, symbolize_names: true)
-
     expect(response).to be_successful
     expect(Breed.count).to eq(1)
     expect(Dog.count).to eq(1)
