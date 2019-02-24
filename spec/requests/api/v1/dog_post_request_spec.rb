@@ -11,7 +11,6 @@ describe "POST requests for Dogs" do
 
     parsed = JSON.parse(response.body, symbolize_names: true)
 
-    binding.pry
     expect(response).to be_successful
     expect(parsed[:data][:attributes]).to have_key(:id)
     expect(parsed[:data][:attributes]).to have_key(:breed_id)
