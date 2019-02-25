@@ -11,4 +11,6 @@ class Dog < ApplicationRecord
   def self.find_dogs_by_breed(order, breed)
     Dog.select("dogs.*, total_score / CAST (votes AS FLOAT) AS ave_score").where(breed_id: breed).order("ave_score #{order}")
   end
+
+
 end
