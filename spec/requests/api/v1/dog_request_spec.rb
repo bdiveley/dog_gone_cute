@@ -12,7 +12,7 @@ describe "Requests for Dogs" do
     expect(parsed[:data]).to be_a(Array)
     expect(parsed[:data].count).to eq(5)
     expect(parsed[:data][0][:attributes]).to have_key(:id)
-    expect(parsed[:data][0][:attributes]).to have_key(:breed_id)
+    expect(parsed[:data][0][:attributes]).to have_key(:breed)
     expect(parsed[:data][0][:attributes]).to have_key(:photo)
     expect(parsed[:data][0][:attributes]).to have_key(:ave_score)
   end
@@ -36,7 +36,7 @@ describe "Requests for Dogs" do
     expect(parsed[:data]).to be_a(Array)
     expect(parsed[:data].count).to eq(5)
     expect(parsed[:data][0][:attributes]).to have_key(:id)
-    expect(parsed[:data][0][:attributes]).to have_key(:breed_id)
+    expect(parsed[:data][0][:attributes]).to have_key(:breed)
     expect(parsed[:data][0][:attributes]).to have_key(:photo)
     expect(parsed[:data][0][:attributes]).to have_key(:ave_score)
   end
@@ -50,7 +50,7 @@ describe "Requests for Dogs" do
     expect(parsed[:data]).to be_a(Array)
     expect(parsed[:data].count).to eq(5)
     expect(parsed[:data][0][:attributes]).to have_key(:id)
-    expect(parsed[:data][0][:attributes]).to have_key(:breed_id)
+    expect(parsed[:data][0][:attributes]).to have_key(:breed)
     expect(parsed[:data][0][:attributes]).to have_key(:photo)
     expect(parsed[:data][0][:attributes]).to have_key(:ave_score)
   end
@@ -67,7 +67,7 @@ describe "Requests for Dogs" do
     expect(parsed[:data]).to be_a(Array)
     expect(parsed[:data].count).to eq(2)
     expect(parsed[:data][0][:attributes]).to have_key(:id)
-    expect(parsed[:data][0][:attributes]).to have_key(:breed_id)
+    expect(parsed[:data][0][:attributes]).to have_key(:breed)
     expect(parsed[:data][0][:attributes]).to have_key(:photo)
     expect(parsed[:data][0][:attributes]).to have_key(:ave_score)
   end
@@ -80,11 +80,12 @@ describe "Requests for Dogs" do
     get "/api/v1/dogs/search?breed=test-chow&order=asc"
 
     parsed = JSON.parse(response.body, symbolize_names: true)
+
     expect(response).to be_successful
     expect(parsed[:data]).to be_a(Array)
     expect(parsed[:data].count).to eq(2)
     expect(parsed[:data][0][:attributes]).to have_key(:id)
-    expect(parsed[:data][0][:attributes]).to have_key(:breed_id)
+    expect(parsed[:data][0][:attributes]).to have_key(:breed)
     expect(parsed[:data][0][:attributes]).to have_key(:photo)
     expect(parsed[:data][0][:attributes]).to have_key(:ave_score)
   end
