@@ -6,8 +6,8 @@ class Api::V1::DogsController < ApplicationController
   end
 
   def create
-    breed = Breed.find_or_create_by(name: breed_name)
-    dog = Dog.find_or_create_by(photo: params[:photo])
+    breed = Breed.find_or_create_by(name: breed_params)
+    dog = Dog.find_or_create_by(dog_params)
 
     if dog.id
       update_dog(dog)
@@ -19,9 +19,15 @@ class Api::V1::DogsController < ApplicationController
 
 private
 
-  def breed_name
+  def dog_params
+    params.permit(:photo)
+  end
+
+  def breed_params
+    params.permit(:photo)
     params[:photo].split("/")[4]
   end
+
 
   def update_dog(dog)
     dog.update(votes: dog.votes += 1, total_score: dog.total_score + params[:score].to_i)
