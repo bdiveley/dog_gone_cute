@@ -1,34 +1,44 @@
-# README
+# Dog-Gone-Cute - Backend
 
-1. Anyone who goes to the site sees the same thing.
-2. Visitors can rate dog photos by cuteness (You may choose the scale)
-3. They can then filter dog photos by cuteness level.
-4. Dogs can also be filtered by dog breed
+## Introduction
+Dog-Gone-Cute is a 100% test-covered Rails application that provides multiple API endpoints for a front-end JavaScript/node.js application by the same name (https://github.com/bdiveley/dog_gone_cute_fe).  The combined applications provide a fun way to waste a few hours by rating the cuteness level of randomly selected dogs.
 
-https://dog.ceo/api/breed/:breed/images/random (by breed)
-https://dog.ceo/api/breeds/image/random (all breeds)
-https://dog.ceo/api/breeds/list/all (lists all breeds)
-https://dog.ceo/api/breed/:breed/images(returns array of images by breed)
+## Project Board
+https://github.com/bdiveley/dog_gone_cute/projects/1
 
-**Database:**
-Breeds - :id, :type
-Dogs - :id, :breed_id, :photo, :votes, :score
+## Setup (from CLI)
+* git clone git@github.com:bdiveley/dog_gone_cute.git
+* bundle install
+* rake db:{drop,create,migrate,seed}
+* rails s (will spin up local server at localhost:3000)
+* Use browser to visit simple 'GET' endpoints or utilize Postman(https://www.getpostman.com/)
+* rails c (gives CLI access to local instance of database)
 
-Why not store all pictures in the database from the beginning?  
-I want to use api so I can get to get pictures dynamically in case they add or change out their images.
+## Running Tests (from CLI)
+* rails s (will spin up local server)
+* rspec (will run all tests in /spec directory)
 
-*Upon page load, an api_call is made to **GET https://dog.ceo/api/breeds/list/all** from the backend which will display in the nav bar along with "Random" and "Cutest"
+## Database Schema
+![alt text](schema.png)
 
-*When a user clicks on one of the dog breed names, a random get call is called to return a dog pic based on the breed selected. **GET https://dog.ceo/api/breed/:breed/images/random**
+## Production Base URL
+```shell
+https://morning-refuge-91147.herokuapp.com/
+```
 
-*When a random button is clicked, another random get call is made to return a new dog pic. **GET https://dog.ceo/api/breeds/image/random**
+## Local Base URL
+```shell
+http://localhost:3000
+```
 
-*No Dog starts in the database.
-*When a user clicks on any picture and then rates the picture, a Create method is called to add that photo do the database (find_or_create).  **POST /api/v1/dogs**
+## Endpoints
 
-**GET /api/v1/dogs?order=desc**
+**Request**
+```shell
+GET /api/v1/dogs?order=desc
+```
 
-**Response (Success)**
+**Response**
 ```shell
 {:data=>
   [{:id=>"603",
@@ -49,10 +59,12 @@ I want to use api so I can get to get pictures dynamically in case they add or c
   ]
 }
 ```
+**Request**
+```shell
+GET /api/v1/dogs?order=asc
+```
 
-**GET /api/v1/dogs?order=asc**
-
-**Response (Success)**
+**Response**
 ```shell
 {:data=>
   [{:id=>"588",
@@ -73,10 +85,12 @@ I want to use api so I can get to get pictures dynamically in case they add or c
   ]
 }
 ```
+**Request**
+```shell
+GET /api/v1/dogs/search?breed=chow&order=desc
+```
 
-**GET /api/v1/dogs/search?breed=chow&order=desc**
-
-**Response (Success)**
+**Response**
 ```shell
 {:data=>
   [{:id=>"1080",
@@ -89,9 +103,12 @@ I want to use api so I can get to get pictures dynamically in case they add or c
 }
 ```
 
-**GET /api/v1/dogs/search?breed=chow&order=asc**
+**Request**
+```shell
+GET /api/v1/dogs/search?breed=chow&order=asc
+```
 
-**Response (Success)**
+**Response**
 ```shell
 {:data=>
   [{:id=>"1085",
@@ -105,14 +122,15 @@ I want to use api so I can get to get pictures dynamically in case they add or c
 }
 ```
 
-**POST /api/v1/dogs**
+**Request**
 ```shell
-Body: { photo: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg",
-  score: 3
+POST /api/v1/dogs
+Body: { "photo": "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567.jpg",
+  "score": "3"
 }
 ```
 
-**Response (Success)**
+**Response**
 ```shell
 {:data=>
   {:id=>"1573",
@@ -121,3 +139,15 @@ Body: { photo: "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_14567
  }
 }
 ```
+
+## Built With
+* JavaScript
+* Node.js
+* CSS
+* HTML
+* AJAX
+* JQuery
+
+## Developer
+Bailey Diveley
+bdiveley (GitHub)
